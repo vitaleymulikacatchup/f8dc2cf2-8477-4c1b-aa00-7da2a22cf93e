@@ -6,12 +6,7 @@ import TextAbout from '@/components/sections/about/TextAbout';
 import FeatureCardTwo from '@/components/sections/feature/FeatureCardTwo';
 import ContactCenter from '@/components/sections/contact/ContactCenter';
 import FooterLogoEmphasis from '@/components/sections/footer/FooterLogoEmphasis';
-
-const assetMap: { id: string; url: string; alt?: string }[] = [
-  { id: "hero-image", url: "https://images.pexels.com/photos/34304582/pexels-photo-34304582.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", alt: "High-angle aerial shot of Morumbi Stadium in São Paulo, featuring the vibrant green field and red seating." },
-  { id: "about-image", url: "https://images.pexels.com/photos/34295404/pexels-photo-34295404.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", alt: "modern architecture interior - Photo by Zulfugar Karimov" },
-  { id: "contact-image", url: "https://images.pexels.com/photos/7964513/pexels-photo-7964513.jpeg?auto=compress&cs=tinysrgb&h=650&w=940", alt: "Two professionals working diligently on laptops in a modern office setup, capturing productivity and teamwork." }
-];
+import { Zap, Shield } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -39,7 +34,7 @@ export default function Home() {
           <HeroBillboard
             title="Welcome to Xeven"
             description="Innovate your digital journey with neobrutalist design."
-            imageSrc="https://images.pexels.com/photos/34304582/pexels-photo-34304582.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+            imageSrc="asset://hero-image"
             buttons={[
               { text: "Learn More", href: "about" },
               { text: "Contact Us", href: "contact" }
@@ -63,8 +58,8 @@ export default function Home() {
         <div className="mx-auto px-4 md:px-6">
           <FeatureCardTwo
             features={[
-              { title: "Intuitive Design", description: "Crafting user-friendly interfaces with modern aesthetics.", icon: "Zap" },
-              { title: "Robust Performance", description: "Ensuring reliability and speed under all conditions.", icon: "Shield" }
+              { title: "Intuitive Design", description: "Crafting user-friendly interfaces with modern aesthetics.", icon: Zap },
+              { title: "Robust Performance", description: "Ensuring reliability and speed under all conditions.", icon: Shield }
             ]}
             className="bg-gray-100 text-black"
           />
